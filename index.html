@@ -30,7 +30,6 @@
             padding: 0 8%;
         }
 
-        /* Navigation Bar */
         nav {
             display: flex;
             justify-content: space-between;
@@ -67,7 +66,6 @@
             color: var(--text-primary);
         }
 
-        /* Hero Section Container */
         .hero-container {
             display: grid;
             grid-template-columns: 3fr 1fr;
@@ -102,7 +100,6 @@
             background-color: var(--accent-red);
         }
 
-        /* Large Screen-Dominating Typography */
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 96px;
@@ -134,10 +131,10 @@
             font-weight: 500;
         }
 
-        /* Call To Action Buttons */
         .cta-group {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -149,6 +146,7 @@
             text-decoration: none;
             transition: all 0.3s;
             cursor: pointer;
+            text-align: center;
         }
 
         .btn-primary {
@@ -172,7 +170,6 @@
             border-color: var(--text-primary);
         }
 
-        /* Sidebar Meta Details */
         .hero-sidebar {
             display: flex;
             flex-direction: column;
@@ -202,7 +199,6 @@
             color: var(--text-primary);
         }
 
-        /* Giant Background Text Graphic */
         .bg-watermark {
             position: absolute;
             right: -5%;
@@ -215,7 +211,6 @@
             pointer-events: none;
         }
 
-        /* Projects List Section */
         .section-container {
             padding: 100px 0;
             border-top: 1px solid #111;
@@ -246,6 +241,7 @@
             color: var(--accent-red);
             text-transform: uppercase;
             letter-spacing: 1.5px;
+            margin-bottom: 15px;
         }
 
         .project-desc {
@@ -270,6 +266,25 @@
             left: 0;
             color: var(--accent-red);
         }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 1px solid var(--accent-red);
+            padding-bottom: 4px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .project-link:hover {
+            color: var(--accent-red);
+            border-color: var(--text-primary);
+        }
     </style>
 </head>
 <body>
@@ -293,12 +308,12 @@
             <div class="h1 accent-title">Ravtani</div>
             
             <p class="hero-description">
-                Data Analyst focused on <strong>data cleaning</strong>, <strong>dashboard automation</strong>, and <strong>business reporting</strong>[cite: 9]. Building end-to-end data tools, operational tracking applications, and interactive dashboards to translate raw data into decisions[cite: 10].
+                Data Analyst focused on <strong>data cleaning</strong>, <strong>dashboard automation</strong>, and <strong>business reporting</strong>. Building end-to-end data tools, operational tracking applications, and interactive dashboards to translate raw data into decisions.
             </p>
 
             <div class="cta-group">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="mailto:krishnaravtani18@gmail.com" class="btn btn-secondary">Get In Touch</a>
+                <a href="resume.pdf" target="_blank" class="btn btn-secondary">View Resume (PDF)</a>
             </div>
         </div>
 
@@ -325,6 +340,7 @@
             <div class="project-meta">
                 <h3>WeVois VTS Management Portal</h3>
                 <div class="project-tools">Flutter Web / Firestore / Cloudinary</div>
+                <a href="https://wevoisvtsmanage.web.app" target="_blank" class="project-link">Launch Live App &rarr;</a>
             </div>
             <div class="project-desc">
                 <ul>
@@ -340,12 +356,13 @@
             <div class="project-meta">
                 <h3>Uber Ride Analytics Dashboard</h3>
                 <div class="project-tools">Power BI / DAX / SQL</div>
+                <a href="https://github.com/krishnaravtani18-dotcom/Uber-Ride-Analytics-PowerBI" target="_blank" class="project-link">View Repository &rarr;</a>
             </div>
             <div class="project-desc">
                 <ul>
-                    <li>Analyzed 5,000+ vehicle transit records across operational time slots, cities, and regional zones[cite: 18].</li>
-                    <li>Engineered comprehensive tracking dashboards featuring designated Corporate Executive and Data Analyst perspectives[cite: 18, 21].</li>
-                    <li>Isolated high-density surge windows and baseline performance drivers by parsing trip cancellation datasets via SQL[cite: 19, 20, 22].</li>
+                    <li>Analyzed 5,000+ vehicle transit records across operational time slots, cities, and regional zones.</li>
+                    <li>Engineered comprehensive tracking dashboards featuring designated Corporate Executive and Data Analyst perspectives.</li>
+                    <li>Isolated high-density surge windows and baseline performance drivers by parsing trip cancellation datasets via SQL.</li>
                 </ul>
             </div>
         </div>
@@ -354,13 +371,50 @@
             <div class="project-meta">
                 <h3>Retail Sales MIS Dashboard</h3>
                 <div class="project-tools">Excel / Power Query / Pivot Tables</div>
+                <a href="https://github.com/krishnaravtani18-dotcom/Retail-Sales-Excel-Dashboard" target="_blank" class="project-link">View Repository &rarr;</a>
             </div>
             <div class="project-desc">
                 <ul>
-                    <li>Cleaned and modeled volatile transactional arrays using advanced Excel Power Query protocols[cite: 14].</li>
-                    <li>Automated core KPI summary frameworks reflecting Year-over-Year (YoY) metrics and margin distribution trends[cite: 14].</li>
-                    <li>Minimized recurring reporting operational times down drastically by configuring dynamic data sorting components[cite: 14].</li>
+                    <li>Cleaned and modeled volatile retail transactional arrays using advanced Excel Power Query protocols.</li>
+                    <li>Automated core KPI summary frameworks reflecting Year-over-Year (YoY) metrics and margin distribution trends.</li>
+                    <li>Minimized recurring reporting operational times down drastically by configuring dynamic data sorting components.</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container" id="skills">
+        <h2 class="section-heading">Technical Capabilities</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div style="border-left: 1px solid var(--accent-red); padding-left: 20px;">
+                <h4 style="font-size: 18px; margin-bottom: 10px;">Databases</h4>
+                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">SQL (Joins, Window Functions, Aggregations), Cloud Firestore NoSQL schema engineering.</p>
+            </div>
+            <div style="border-left: 1px solid var(--accent-red); padding-left: 20px;">
+                <h4 style="font-size: 18px; margin-bottom: 10px;">Data Visualization</h4>
+                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">Power BI dashboard architecture, advanced DAX modeling, Excel Pivot charts & interactive slicers.</p>
+            </div>
+            <div style="border-left: 1px solid var(--accent-red); padding-left: 20px;">
+                <h4 style="font-size: 18px; margin-bottom: 10px;">Automation & ETL</h4>
+                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">Power Query pipelines, binary asset cloud streaming pipelines, structured text data transformations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container" id="contact" style="padding-bottom: 150px;">
+        <h2 class="section-heading">Connect</h2>
+        <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+            <div>
+                <p style="color: var(--text-secondary); margin-bottom: 10px; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;">Direct Email</p>
+                <a href="mailto:krishnaravtani18@gmail.com" style="color: var(--text-primary); text-decoration: none; font-size: 18px; font-weight: 500; transition: color 0.3s;" onmouseover="this.style.color='#c9182b'" onmouseout="this.style.color='#fff'">krishnaravtani18@gmail.com</a>
+            </div>
+            <div>
+                <p style="color: var(--text-secondary); margin-bottom: 10px; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;">Professional Network</p>
+                <a href="https://linkedin.com/in/krishna-ravtani" target="_blank" style="color: var(--text-primary); text-decoration: none; font-size: 18px; font-weight: 500; transition: color 0.3s;" onmouseover="this.style.color='#c9182b'" onmouseout="this.style.color='#fff'">LinkedIn Profile</a>
+            </div>
+            <div>
+                <p style="color: var(--text-secondary); margin-bottom: 10px; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;">Code Repositories</p>
+                <a href="https://github.com/krishnaravtani18-dotcom" target="_blank" style="color: var(--text-primary); text-decoration: none; font-size: 18px; font-weight: 500; transition: color 0.3s;" onmouseover="this.style.color='#c9182b'" onmouseout="this.style.color='#fff'">GitHub Account</a>
             </div>
         </div>
     </section>
