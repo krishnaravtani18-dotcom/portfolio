@@ -22,6 +22,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-primary);
@@ -223,20 +227,20 @@
             color: var(--accent-red);
         }
 
-        .project-card {
+        .project-card, .info-card {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 40px;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
-        .project-meta h3 {
+        .project-meta h3, .info-meta h3 {
             font-size: 24px;
             font-weight: 500;
             margin-bottom: 10px;
         }
 
-        .project-tools {
+        .project-tools, .info-subtitle {
             font-size: 12px;
             color: var(--accent-red);
             text-transform: uppercase;
@@ -244,23 +248,23 @@
             margin-bottom: 15px;
         }
 
-        .project-desc {
+        .project-desc, .info-details {
             color: var(--text-secondary);
             font-size: 16px;
             line-height: 1.8;
         }
 
-        .project-desc ul {
+        .project-desc ul, .info-details ul {
             list-style: none;
         }
 
-        .project-desc li {
+        .project-desc li, .info-details li {
             margin-bottom: 12px;
             position: relative;
             padding-left: 20px;
         }
 
-        .project-desc li::before {
+        .project-desc li::before, .info-details li::before {
             content: "—";
             position: absolute;
             left: 0;
@@ -285,6 +289,22 @@
             color: var(--accent-red);
             border-color: var(--text-primary);
         }
+
+        .certs-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .project-card, .info-card {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .certs-list {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -297,6 +317,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -394,30 +416,4 @@
                 <h4 style="font-size: 18px; margin-bottom: 10px;">Data Visualization</h4>
                 <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">Power BI dashboard architecture, advanced DAX modeling, Excel Pivot charts & interactive slicers.</p>
             </div>
-            <div style="border-left: 1px solid var(--accent-red); padding-left: 20px;">
-                <h4 style="font-size: 18px; margin-bottom: 10px;">Automation & ETL</h4>
-                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">Power Query pipelines, binary asset cloud streaming pipelines, structured text data transformations.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-container" id="contact" style="padding-bottom: 150px;">
-        <h2 class="section-heading">Connect</h2>
-        <div style="display: flex; gap: 40px; flex-wrap: wrap;">
-            <div>
-                <p style="color: var(--text-secondary); margin-bottom: 10px; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;">Direct Email</p>
-                <a href="mailto:krishnaravtani18@gmail.com" style="color: var(--text-primary); text-decoration: none; font-size: 18px; font-weight: 500; transition: color 0.3s;" onmouseover="this.style.color='#c9182b'" onmouseout="this.style.color='#fff'">krishnaravtani18@gmail.com</a>
-            </div>
-            <div>
-                <p style="color: var(--text-secondary); margin-bottom: 10px; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;">Professional Network</p>
-                <a href="https://linkedin.com/in/krishna-ravtani" target="_blank" style="color: var(--text-primary); text-decoration: none; font-size: 18px; font-weight: 500; transition: color 0.3s;" onmouseover="this.style.color='#c9182b'" onmouseout="this.style.color='#fff'">LinkedIn Profile</a>
-            </div>
-            <div>
-                <p style="color: var(--text-secondary); margin-bottom: 10px; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;">Code Repositories</p>
-                <a href="https://github.com/krishnaravtani18-dotcom" target="_blank" style="color: var(--text-primary); text-decoration: none; font-size: 18px; font-weight: 500; transition: color 0.3s;" onmouseover="this.style.color='#c9182b'" onmouseout="this.style.color='#fff'">GitHub Account</a>
-            </div>
-        </div>
-    </section>
-
-</body>
-</html>
+            <div style="border-left: 1px solid var(--
