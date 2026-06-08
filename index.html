@@ -139,13 +139,13 @@
 
         .cta-group {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 16px 36px;
-            font-size: 12px;
+            padding: 16px 32px;
+            font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 600;
@@ -174,6 +174,7 @@
 
         .btn-secondary:hover {
             border-color: var(--text-primary);
+            background-color: rgba(255, 255, 255, 0.03);
         }
 
         .hero-sidebar {
@@ -376,6 +377,73 @@
             color: var(--accent-red);
         }
 
+        /* Premium Certificates Section Styles */
+        .cert-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .cert-card {
+            background: var(--card-bg); 
+            padding: 30px; 
+            border-radius: 8px; 
+            border: 1px solid var(--card-border);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .cert-card:hover {
+            border-color: #252525;
+            transform: translateY(-2px);
+        }
+
+        .cert-issuer {
+            color: var(--accent-red); 
+            font-size: 11px; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .cert-title {
+            font-size: 18px; 
+            color: #fff; 
+            margin-bottom: 12px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .cert-details {
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .cert-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #161616;
+            padding-top: 15px;
+            font-size: 11px;
+        }
+
+        .cert-code {
+            color: var(--text-muted);
+            font-family: monospace;
+        }
+
+        .cert-date {
+            color: var(--text-secondary);
+        }
+
         @media (max-width: 992px) {
             .hero-container, .layout-split, .project-item {
                 grid-template-columns: 1fr;
@@ -399,7 +467,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
+            <li><a href="#education">Education & Certs</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -416,7 +484,8 @@
 
             <div class="cta-group">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="resume.pdf" target="_blank" class="btn btn-secondary">View Resume (PDF)</a>
+                <a href="Krishna_Ravtani_resume_DA.pdf" target="_blank" class="btn btn-secondary">Resume (India Format)</a>
+                <a href="Krishna_Ravtani_Europass_DA.pdf" target="_blank" class="btn btn-secondary">Europass CV (Europe Format)</a>
             </div>
         </div>
 
@@ -449,7 +518,7 @@
                     Right now I'm actively engineering and expanding systems in the <strong>production phase</strong> — building scalable tracking utilities using Python, SQL database structures, and analytical visualizations through hands-on business deployment. I enjoy creating custom tools that transform messy, unstructured asset logs into scannable insights.
                 </p>
                 <p>
-                    I hold verified technical validations including an optimization credential in <strong>Microsoft Advanced Spreadsheet Operations</strong>, helping me approach corporate data tracking as a highly practical decision engine.
+                    I hold verified technical credentials across business intelligence environment platforms and cloud data layers, helping me approach corporate data tracking as a highly practical decision engine.
                 </p>
             </div>
 
@@ -475,8 +544,8 @@
                     <div class="row-value">Data Analytics & Automation</div>
                 </div>
                 <div class="table-row">
-                    <div class="row-label">Status</div>
-                    <div class="row-value-highlight">Open to Opportunities</div>
+                    <div class="row-label">Target Region</div>
+                    <div class="row-value">Poland / EU / India (Open to Relocation)</div>
                 </div>
             </div>
         </div>
@@ -545,11 +614,11 @@
             </div>
             <div style="border-left: 1px solid var(--accent-red); padding-left: 20px;">
                 <h4 style="font-size: 18px; margin-bottom: 10px;">Data Visualization</h4>
-                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">Power BI dashboard architecture, advanced DAX modeling, Excel Pivot charts & interactive slicers.</p>
+                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">Power BI desktop architecture, advanced DAX modeling, Excel Pivot charts & interactive slicers.</p>
             </div>
             <div style="border-left: 1px solid var(--accent-red); padding-left: 20px;">
                 <h4 style="font-size: 18px; margin-bottom: 10px;">Automation & ETL</h4>
-                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">Power Query pipelines, binary asset cloud streaming pipelines, structured text data transformations.</p>
+                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">Power Query pipelines, data transformation frameworks, structured sheet summaries.</p>
             </div>
         </div>
     </section>
@@ -560,14 +629,14 @@
 
         <div class="project-item">
             <div class="project-header">
-                <h3>Operation Executive & Tech Lead</h3>
+                <h3>Operations Executive</h3>
                 <div class="project-tags">WeVois Labs Pvt. Ltd. | 01/2026 - Present</div>
             </div>
             <div class="project-desc">
                 <ul class="bullet-items">
-                    <li>Developed and maintain the WeVois VTS Manage application using Flutter and Cloud Firestore to streamline asset data tracking.</li>
-                    <li>Automated cross-departmental operations and data workflows for regional vehicle tracking system (VTS) assets and hardware logs.</li>
-                    <li>Designed an integrated email and reporting pipeline to eliminate manual device tracking errors and speed up data entry.</li>
+                    <li>Track and audit fleet-wide device status metrics across Google Sheets, managing 500+ asset databases.</li>
+                    <li>Engineered an operational audit pipeline to cross-reference live tracking data, preventing €50,000+ in revenue leaks.</li>
+                    <li>Developed and maintain the production WeVois VTS Manage application using Flutter Web and Cloud Firestore NoSQL.</li>
                 </ul>
             </div>
         </div>
@@ -579,8 +648,8 @@
             </div>
             <div class="project-desc">
                 <ul class="bullet-items">
-                    <li>Analyzed student performance datasets using Excel to isolate long-term class improvement metrics.</li>
-                    <li>Maintained structured academic databases and automated score calculation protocols using advanced formulas.</li>
+                    <li>Analyzed student performance datasets using Excel to isolate long-term class improvement metrics for 500+ students.</li>
+                    <li>Maintained structured academic databases and automated score calculation protocols, reducing manual processing by 40%.</li>
                     <li>Enhanced reporting consistency for internal management reviews using formula-driven spreadsheet models.</li>
                 </ul>
             </div>
@@ -593,16 +662,15 @@
             </div>
             <div class="project-desc">
                 <ul class="bullet-items">
-                    <li>Managed accurate records of customer accounts and loan data structures directly inside MS Excel frameworks.</li>
+                    <li>Managed accurate records of 500+ customer accounts and loan data structures inside Excel frameworks with zero data inconsistencies.</li>
                     <li>Prepared and delivered daily analytical MIS reports for internal management review cycles.</li>
-                    <li>Maintained strict verification and consistency checks across data metrics to support quality operational benchmarks.</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section class="section-container" id="education">
-        <div class="section-heading">05 — Education</div>
+        <div class="section-heading">05 — Education & Credentials</div>
         <h2 class="section-title">Academic & <em>Certs.</em></h2>
 
         <div class="project-item">
@@ -611,20 +679,72 @@
                 <div class="project-tags">University of Rajasthan | 2018 - 2021</div>
             </div>
             <div class="project-desc">
-                <p>Focused on mathematical modeling and quantitative analysis, establishing the data foundation for metric analysis.</p>
+                <p style="color: var(--text-secondary); line-height: 1.8; font-weight: 300;">Focused on mathematical modeling and quantitative analysis, establishing the logical foundation for metric analysis and database engineering.</p>
             </div>
         </div>
 
-        <div style="margin-top: 40px;">
-            <h3 style="font-size: 20px; margin-bottom: 25px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;">Industry Credentials</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                <div style="background: var(--card-bg); padding: 25px; border-radius: 6px; border: 1px solid var(--card-border);">
-                    <h4 style="font-size: 16px; color: #fff; margin-bottom: 5px;">Microsoft Introduction to MS Excel</h4>
-                    <p style="color: var(--accent-red); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;">Advanced Spreadsheet Mastery</p>
+        <div style="margin-top: 60px;">
+            <h3 style="font-size: 20px; margin-bottom: 30px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--text-primary);">Verified Professional Certifications</h3>
+            
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div>
+                        <div class="cert-issuer">Microsoft / Simplilearn</div>
+                        <div class="cert-title">Power BI for Beginners</div>
+                        <div class="cert-details">Business intelligence fundamentals, desktop environment workspace navigation, ETL pipelines, data transformations, and interactive dashboard deployments.</div>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-code">ID: 9687088</span>
+                        <span class="cert-date">Jan 2026</span>
+                    </div>
                 </div>
-                <div style="background: var(--card-bg); padding: 25px; border-radius: 6px; border: 1px solid var(--card-border);">
-                    <h4 style="font-size: 16px; color: #fff; margin-bottom: 5px;">Google Cloud Intro to Generative AI Studio</h4>
-                    <p style="color: var(--accent-red); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;">Cloud Data & AI Implementation</p>
+
+                <div class="cert-card">
+                    <div>
+                        <div class="cert-issuer">Microsoft / Simplilearn</div>
+                        <div class="cert-title">Introduction to MS Excel</div>
+                        <div class="cert-details">Advanced data validation logic, Power Query data pipeline cleansing models, dynamic KPI automation matrices, Pivot summaries, and dashboard filters.</div>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-code">Verified Course</span>
+                        <span class="cert-date">Oct 2025</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div>
+                        <div class="cert-issuer">Google Cloud</div>
+                        <div class="cert-title">Introduction to Generative AI Studio</div>
+                        <div class="cert-details">Foundational training in cloud-based AI/ML infrastructure, large language models context setups, prompt tuning mechanics, and intelligent pipeline scaling.</div>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-code">ID: 9013898</span>
+                        <span class="cert-date">Sep 2025</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div>
+                        <div class="cert-issuer">Simplilearn SkillUp</div>
+                        <div class="cert-title">ChatGPT 101: What is ChatGPT?</div>
+                        <div class="cert-details">Large Language Model architectures, prompt engineering guidelines for productivity, automation, and operational analytics business use-cases.</div>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-code">ID: 8854579</span>
+                        <span class="cert-date">Aug 2025</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div>
+                        <div class="cert-issuer">Deloitte / Forage</div>
+                        <div class="cert-title">Cyber Security Job Simulation</div>
+                        <div class="cert-details">Real-world case analysis covering security architecture incident triage parsing, data protection auditing, compliance review tasks, and corporate risk mitigation frameworks.</div>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-code">Code: zZsYuXEBQxMN8YHbR</span>
+                        <span class="cert-date">Aug 2025</span>
+                    </div>
                 </div>
             </div>
         </div>
